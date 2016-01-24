@@ -1,0 +1,43 @@
+<head>
+  <title>app</title>
+</head>
+
+<body>
+  {{> commentList}}
+  {{> commentAdd}}
+</body>
+
+<template name="commentList">
+  <h1>Not a Slack Clone</h1>
+
+  <ul>
+    {{#each comments}}
+
+      <li>
+        <div>
+          {{login}}
+        </div>
+
+        <div>
+          {{timestamp}}
+        </div>
+
+        <div>
+          {{comment}}
+        </div>
+      </li>
+
+    {{else}}
+
+      <li>Sorry, no comments yet!</li>
+
+    {{/each}}
+  </ul>
+</template>
+
+<template name="commentAdd">
+  <form>
+    <input type="text" name="comment" autofocus="true" placeholder="Add a comment">
+    <input type="submit" value="Add">
+  </form>
+</template>
