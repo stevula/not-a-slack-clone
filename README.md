@@ -1,2 +1,2 @@
 # not-a-slack-clone
-Real-time chat using Meteor
+A single-page, real-time chat app using the Meteor framework.

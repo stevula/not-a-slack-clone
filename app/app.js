@@ -4,6 +4,9 @@ if (Meteor.isClient) {
   Template.commentList.helpers({
     comments: function() {
       return Comments.find();
+    },
+    formatTimestamp: function(datetime) {
+      return moment(datetime).calendar();
     }
   });
 
@@ -29,6 +32,6 @@ if (Meteor.isClient) {
 
 if (Meteor.isServer) {
   Meteor.startup(function () {
-// code to run on server at startup
-});
+  // code to run on server at startup
+  });
 }
